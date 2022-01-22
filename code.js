@@ -36,7 +36,7 @@ var dict = {
 };
 
 var divvo = d3.select("#friends");
-var root = "C:/Users/paolo/Desktop/xxx"
+var root = ""
 
 const btn = document.querySelector('#btn');        
 const radioButtons = document.querySelectorAll('input[name="size"]');
