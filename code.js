@@ -67,7 +67,7 @@ lol.append("video")
   .attr("height",function(d){ if (d.type === "audio") { return 50 } else { return ""}})
   .attr("src", function(d){ return root + d.path;})
   .property("controls", true)
-  .property("autoplay", false);
+  .property("autoplay", true);
 
 lol.exit().remove();
 
