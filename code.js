@@ -36,7 +36,7 @@ var dict = {
 };
 
 var divvo = d3.select("#friends");
-var root = ""
+var root = "https://rabbitefriends.github.io/robi26/"
 
 const btn = document.querySelector('#btn');        
 const radioButtons = document.querySelectorAll('input[name="size"]');
