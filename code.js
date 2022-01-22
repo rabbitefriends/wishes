@@ -10,15 +10,15 @@ var data = [
 {name:"Bea & Joss", path:"/files/06_bea_joss.ogg", city:"London", type: "audio"},
 {name:"Sauve", path:"/files/05_sauve.ogg", city:"Berlin", type: "audio"},
 {name:"Conni", path:"/files/08_conni.ogg", city:"Rome", type: "audio"},
-{name:"Marco", path:"/files/09_marco.ogg", city:"Rome", type: "audio"}]
+{name:"Marco", path:"/files/09_marco.ogg", city:"Rome", type: "audio"},
+{name:"Egemen", path:"/files/10_egemen.ogg", city:"Berlin", type: "audio"},
+{name:"Dennis", path:"/files/12_dennis.ogg", city:"London", type: "audio"},
+{name:"Lalli", path:"/files/11_lalli.ogg", city:"London", type: "audio"}]
 
 var missing = [ 
 {name:"Gerta & Luca", path:"/files/XXX.mp4", city:"London", type: "audio"},
 {name:"Brian & Andrea", path:"/files/XXX.mp4", city:"Rome", type: "audio"},
 {name:"Lavi & Lollo", path:"/files/XXX.mp4", city:"Berlin", type: "audio"},
-{name:"Lalli", path:"/files/XXX.mp4", city:"London", type: "audio"},
-{name:"Dennis", path:"/files/XXX.mp4", city:"London", type: "audio"},
-{name:"Egemen", path:"/files/XXX.mp4", city:"Berlin", type: "audio"},
 {name:"Fede T.", path:"/files/XXX.mp4", city:"Rome", type: "audio"},
 {name:"Fede P.", path:"/files/XXX.mp4", city:"Rome", type: "audio"},
 {name:"Asia", path:"/files/XXX.mp4", city:"Rome", type: "audio"}]
