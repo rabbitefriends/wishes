@@ -13,15 +13,17 @@ var data = [
 {name:"Marco", path:"/files/09_marco.ogg", city:"Rome", type: "audio"},
 {name:"Egemen", path:"/files/10_egemen.ogg", city:"Berlin", type: "audio"},
 {name:"Dennis", path:"/files/12_dennis.ogg", city:"London", type: "audio"},
-{name:"Lalli", path:"/files/11_lalli.ogg", city:"London", type: "audio"}]
+{name:"Lalli", path:"/files/11_lalli.ogg", city:"London", type: "audio"},
+{name:"Gerta & Luca", path:"/files/14_gerta.ogg", city:"London", type: "audio"},
+{name:"Lollo", path:"/files/17_lollo.ogg", city:"Berlin", type: "audio"},
+{name:"Lavi", path:"/files/16_lavi.ogg", city:"Berlin", type: "audio"},
+{name:"Fede T.", path:"/files/15_fede_t.aac", city:"Rome", type: "audio"},
+{name:"Asia", path:"/files/13_asia.ogg", city:"Rome", type: "audio"}]
 
 var missing = [ 
-{name:"Gerta & Luca", path:"/files/XXX.mp4", city:"London", type: "audio"},
+
 {name:"Brian & Andrea", path:"/files/XXX.mp4", city:"Rome", type: "audio"},
-{name:"Lavi & Lollo", path:"/files/XXX.mp4", city:"Berlin", type: "audio"},
-{name:"Fede T.", path:"/files/XXX.mp4", city:"Rome", type: "audio"},
-{name:"Fede P.", path:"/files/XXX.mp4", city:"Rome", type: "audio"},
-{name:"Asia", path:"/files/XXX.mp4", city:"Rome", type: "audio"}]
+{name:"Fede P.", path:"/files/XXX.mp4", city:"Rome", type: "audio"}]
 
 var data_london = getPeopleByCity("London");
 var data_berlin = getPeopleByCity("Berlin");
