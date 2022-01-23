@@ -18,11 +18,11 @@ var data = [
 {name:"Lollo", path:"/files/17_lollo.ogg", city:"Berlin", type: "audio"},
 {name:"Lavi", path:"/files/16_lavi.ogg", city:"Berlin", type: "audio"},
 {name:"Fede T.", path:"/files/15_fede_t.aac", city:"Rome", type: "audio"},
+{name:"Brian & Andrea", path:"/files/18_brian_andrea.ogg", city:"Rome", type: "audio"},
 {name:"Asia", path:"/files/13_asia.ogg", city:"Rome", type: "audio"}]
 
 var missing = [ 
 
-{name:"Brian & Andrea", path:"/files/XXX.mp4", city:"Rome", type: "audio"},
 {name:"Fede P.", path:"/files/XXX.mp4", city:"Rome", type: "audio"}]
 
 var data_london = getPeopleByCity("London");
