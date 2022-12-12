@@ -46,7 +46,6 @@ August 2021 : ok on Chrome v92+, Firefox v90+, Edge v92+
 */
 
 #parchment {
-  height:500px;
   position: absolute;
   display: flex;
     width: 75%;
@@ -63,9 +62,7 @@ August 2021 : ok on Chrome v92+, Firefox v90+, Edge v92+
 }
 
 main p {
-  font-size: 2.25em;
   color: #7F3300;
-  margin-top: .75em;
   text-align: justify;
 }
 
@@ -105,6 +102,7 @@ div p:not(:first-child)::first-letter {
 }
 
 #poem {
+  font-size: 2em;
   width: 45%;
   margin-left: 40%;
   height: auto;
@@ -114,14 +112,7 @@ div p:not(:first-child)::first-letter {
 
 }
 
-.cachet {
-  /* image width = 210px and height = 250px */
-  /*  5 is one common denominator 210 = 5 * 42 */
-  width: calc((100vw * 5) / 42);
-  height: auto; /* Height is auto ajusted */
-  margin-top: 4rem;
-  margin-left: auto;
-}
+
 
 #labarum img, .cachet img {
   object-fit: cover;
@@ -129,11 +120,6 @@ div p:not(:first-child)::first-letter {
   height: 100%;
 }
 
-#signature {
-  text-align: right;
-  color: black;
-  font-size: 250%;
-}
 </style>
 </head>
 <body>
@@ -156,8 +142,11 @@ div p:not(:first-child)::first-letter {
     ultricies sed, dolor. <br>
 
     Cras elementum ultrices diam. <br>
-    Maecenas ligula massa, varius a, semper congue, euismod non, mi. <br>
-    Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, <br>
+    Maecenas ligula massa, varius a, <br>
+    semper congue, euismod non, mi. <br>
+    Proin porttitor, <br>
+    orci nec nonummy molestie, <br>
+    enim est eleifend mi, <br>
     non fermentum diam nisl sit amet erat. 
 
   </div>
