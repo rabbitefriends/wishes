@@ -9,9 +9,9 @@ window.addEventListener('resize', function(event){
 
 function ScrollHeight() {
   var content = document.querySelector('#parchment');
-  var container = document.querySelector('#contain');
+  var container = document.querySelector('#poem');
 
   // SVG feTurbulence can modify all others elements, fo this reason "parchment" is in another <div> and in absolute position.
   // so for a better effect, absolute height is defined by his content.
-  content.style.height = '800px';
+  content.style.height = container.offsetHeight + 300 + 'px';
 }
