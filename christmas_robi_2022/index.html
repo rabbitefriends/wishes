@@ -46,6 +46,7 @@ August 2021 : ok on Chrome v92+, Firefox v90+, Edge v92+
 */
 
 #parchment {
+  height:500px;
   position: absolute;
   display: flex;
     width: 75%;
@@ -95,9 +96,22 @@ div p:not(:first-child)::first-letter {
 }
 
 #labarum {
-  width: 80%;
-  margin-left: calc((100% - 20%) / 2);
+  width: 45%;
+  margin-left: 2.5%;
   height: auto;
+    position: absolute;
+    top: 200px;
+
+}
+
+#poem {
+  width: 45%;
+  margin-left: 40%;
+  height: auto;
+  position: absolute;
+  top: 250px;
+
+
 }
 
 .cachet {
@@ -133,7 +147,7 @@ div p:not(:first-child)::first-letter {
         <iframe id="vs_iframe" src="https://www.viewstl.com/?embedded&url=https%3A%2F%2Frabbitefriends.github.io%2Fwishes%2Fchristmas_robi_2022%2FRobi_and_Rocky.stl&bgcolor=transparent&color=red&orientation=front&noborder=yes&clean=yes&shading=flat" style="border:0;margin:0;width:100%;height:500px;"></iframe>
     </p>
 
-    <p>Lorem ipsum dolor sit amet, <br>
+    <p id="poem">Lorem ipsum dolor sit amet, <br>
     consectetur adipiscing elit. <br>
     Sed non risus. <br>
 
@@ -144,10 +158,8 @@ div p:not(:first-child)::first-letter {
     Cras elementum ultrices diam. <br>
     Maecenas ligula massa, varius a, semper congue, euismod non, mi. <br>
     Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, <br>
-    non fermentum diam nisl sit amet erat. </p>
-    <!-- This a red wine cachet ... but shh ! -->
-    <p class="cachet"><img src="https://i.postimg.cc/4NBYNqCR/22.png"></p>
-    <div id="signature">Cringe Master<br />Nerd Capus Massimus</div>
+    non fermentum diam nisl sit amet erat. 
+
   </div>
 </main>
 
