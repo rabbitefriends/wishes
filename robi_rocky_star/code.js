@@ -13,7 +13,7 @@ function ScrollHeight() {
 
   // SVG feTurbulence can modify all others elements, fo this reason "parchment" is in another <div> and in absolute position.
   // so for a better effect, absolute height is defined by his content.
-  content.style.height = container.offsetHeight + 300 + 'px';
+  content.style.height = container.offsetHeight + 500 + 'px';
 }
 
 const btnEN = document.getElementById('enbutton');
@@ -108,3 +108,48 @@ btnIT.addEventListener('click', function() {
 btnES.addEventListener('click', function() {
   someHeader.innerHTML=esPoem;
 });
+
+function Play(which)
+{
+  var myAudio = document.getElementById(which);
+  if(myAudio.paused) {
+      myAudio.play();
+  }
+  else {
+     myAudio.pause();
+  }
+}
+
+function Stop(which)
+{
+  if (which == 'audioIT') {
+    var myAudioEN = document.getElementById("audioEN");
+    var myAudioES = document.getElementById("audioES");
+    myAudioEN.pause();
+    myAudioES.pause();
+  }
+
+    if (which == 'audioEN') {
+    var myAudioIT = document.getElementById("audioIT");
+    var myAudioES = document.getElementById("audioES");
+    myAudioIT.pause();
+    myAudioES.pause();
+  }
+
+    if (which == 'audioES') {
+    var myAudioEN = document.getElementById("audioEN");
+    var myAudioIT = document.getElementById("audioIT");
+    myAudioEN.pause();
+    myAudioIT.pause();
+  }
+
+   if (which == 'all') {
+  var myAudioEN = document.getElementById("audioEN");
+  var myAudioES = document.getElementById("audioES");
+  var myAudioIT = document.getElementById("audioIT");
+
+  myAudioEN.pause();
+  myAudioES.pause();
+  myAudioES.pause();
+}
+}

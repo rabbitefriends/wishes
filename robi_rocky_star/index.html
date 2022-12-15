@@ -63,7 +63,6 @@ August 2021 : ok on Chrome v92+, Firefox v90+, Edge v92+
 
 main p {
   color: #7F3300;
-  text-align: justify;
 }
 
 div p:not(:first-child)::first-letter {
@@ -86,10 +85,10 @@ div p:not(:first-child)::first-letter {
 .inkTitle {
   font-size: 3em;
     font-family: Pirata One, sans-serif;
-  text-align: center;
   line-height: 3em;
     color: black;
     opacity: 0.6;
+    margin-left:10%;
 }
 
 #labarum {
@@ -123,9 +122,9 @@ p.note {
 
 #enbutton {
   position: absolute;
-  top: 100px;
+  top: 140px;
   width: 5%;
-  left: 41.5%;
+  left: 61.5%;
   background-color: #7F3300;
   border: none;
   padding-top:2.5px;
@@ -139,9 +138,9 @@ p.note {
 
 #itbutton {
   position: absolute;
-  top: 100px;
+  top: 140px;
   width: 5%;
-  left: 47.5%;
+  left: 67.5%;
   background-color: #7F3300;
   border: none;
   padding-top:2.5px;
@@ -155,9 +154,9 @@ p.note {
 
 #esbutton {
   position: absolute;
-  top: 100px;
+  top: 140px;
   width: 5%;
-  left: 53.5%;
+  left: 73.5%;
   background-color: #7F3300;
   border: none;
   padding-top:2.5px;
@@ -166,6 +165,22 @@ p.note {
   font-family: Pirata One, sans-serif;
   font-size: 20px;
   border-radius: 8px;
+}
+
+#audiobutton {
+  position: absolute;
+  top: 180px;
+  width: 5%;
+  left: 67.5%;
+  background-color: #7F3300;
+  border: none;
+  padding-top:2.5px;
+  padding-bottom:2.5px;
+  color: white;
+  font-family: Pirata One, sans-serif;
+  font-size: 20px;
+  border-radius: 8px;
+
 }
 
 
@@ -227,11 +242,22 @@ averti con me sarebbe stato perfetto <br>
 Buon Natale, Paolo
 </p>
 
-    <button id="enbutton">EN</button>
-    <button id="itbutton">IT</button>
-    <button id="esbutton">ES</button>
+    <button onClick="Stop('audioEN'); Play('audioEN');" id="enbutton">EN</button>
+    <button onClick="Stop('audioIT'); Play('audioIT');" id="itbutton">IT</button>
+    <button onClick="Stop('audioES'); Play('audioES');" id="esbutton">ES</button>
+    <button onClick="Stop('all');" id="audiobutton">🤫</button>
 
+<audio style="display:none" controls id="audioEN">
+      <source src="starfish.m4a" type="audio/mp3">
+    </audio>
 
+<audio style="display:none" controls id="audioES">
+      <source src="estrella.m4a" type="audio/mp3">
+    </audio>
+
+<audio style="display:none" controls id="audioIT">
+      <source src="stella.m4a" type="audio/mp3">
+    </audio>
 
   </div>
 </main>
