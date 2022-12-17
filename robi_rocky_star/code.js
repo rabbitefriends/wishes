@@ -40,12 +40,7 @@ E se ne innamoro', come faceva sempre <br>
 In un impeto di passione, la mise nelle mutandine <br>
 E con grande piacere, la stella marina si trasformo' in un uomo <br>
 Rocky si eccito', non credendo ai suoi occhi <br>
-Mentre Robi godeva della sua nuova compagnia <br>
-<br>
-La volpe e l'elfa, insieme nell'avventura <br>
-Esploravano il mondo e si divertivano <br>
-Ma alla fine, il loro amore era solo un illusione <br>
-Mentre tornavano alla loro vita, senza piu' rimpianti.`;
+Mentre Robi godeva della sua nuova compagnia <br>`;
 
 var esPoem =`Robi, la chica elfa, amaba los libros <br>
 Sus dias pasados hojeando paginas <br>
@@ -65,12 +60,7 @@ Y se enamoro, como siempre lo hacia <br>
 En un impulso de pasion, la puso en sus calzones <br>
 Y con gran placer, la estrella de mar se transformo en un hombre <br>
 Rocky se excito, no podia creer lo que veia <br>
-Mientras Robi disfrutaba de su nueva compania <br>
-<br>
-La zorra y la elfa, juntas en la aventura <br>
-Explorando el mundo y divirtiendose <br>
-Pero al final, su amor era solo una ilusion <br>
-Mientras regresaban a sus vidas, sin mas remordimientos.<br>`; 
+Mientras Robi disfrutaba de su nueva compania <br>`; 
 
 var enPoem =`Robi, the elf girl, was in love with books <br>
 Her days spent reading stories and tales <br>
@@ -90,12 +80,7 @@ And fell in love with it, as she did with all <br>
 She kissed its cold, wet skin, and to her surprise <br>
 The starfish transformed into a man before her eyes <br>
 His body now human, but his heart still of the sea <br>
-Robi was in awe, unable to believe what she was seeing <br>
-<br>
-Rocky the fox and Robi the elf girl <br>
-Explored the world and loved without fear <br>
-But in the end, their love was just a whirl <br>
-As they went back to their lives, without a tear. <br>`;
+Robi was in awe, unable to believe what she was seeing <br>`;
 
 btnEN.addEventListener('click', function() {
   someHeader.innerHTML=enPoem;
