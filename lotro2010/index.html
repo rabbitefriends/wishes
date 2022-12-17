@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>LOTRO 2010</title>
+   <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet"> 
+  
+      <style>
+
+@import url('https://fonts.googleapis.com/css?family=Pirata+One|Bilbo+Swash+Caps&display=swap');
+      * {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  --d: 75vmin;
+  --f: .2;
+  --ty: 0;
+  --tx: calc((0.7 + .5*var(--f))*var(--d));
+  --oy: calc(var(--tx) - .5*(1 - var(--f))*var(--d) + 1rem);
+  display: flex;
+  overflow-x: hidden;
+  flex-direction: column;
+  min-width: .75rem;
+  min-height: 100vh;
+  background-color:rgb(0,0,0);
+background-image:url(white_marble_background_seamless.jpg);
+background-position:top left;
+background-repeat:repeat;
+background-attachment:fixed;
+  font-size: 1.5rem;
+  font-family: Pirata One, sans-serif;
+}
+
+div.title-box {
+  position: absolute;
+  top: 100px;
+  left: 25%;
+  width: 50%;
+}
+
+
+div.form {
+    width: 30%;
+    left: 35%;
+    position: relative;
+}
+
+h2, h3 {
+  text-align: center;
+}
+
+input.galleria {
+  position: absolute;
+  left: -200vw;
+}
+
+label {
+  font-size: 0;
+  cursor: pointer;
+}
+
+img {
+  position: absolute;
+  top:25%;
+  width: 100%;
+  height: auto;
+}
+
+p {
+  margin: .75em 1em;
+  transform: scale(0) translate(50%);
+  opacity: 0;
+  transition: 0.3s calc(var(--k, 0)*.1s);
+}
+p:nth-child(2) {
+  --k: 1;
+}
+p:nth-child(3) {
+  --k: 2;
+}
+p:nth-child(4) {
+  --k: 3;
+}
+p:nth-child(5) {
+  --k: 4;
+}
+
+.gallery {
+  flex: 1;
+  position: relative;
+  transform-style: preserve-3d;
+}
+.gallery__item {
+  background-color:black;
+  overflow: hidden;
+  position: absolute;
+  top: var(--oy);
+  left: 50%;
+  margin: 0 calc(-.5*var(--d));
+  width: var(--d);
+  height: var(--d);
+  border: solid calc(.01*var(--d)) whitesmoke;
+  border-radius: 50%;
+  --a: calc(var(--k)*10deg);
+  transform: translateY(var(--ty)) rotate(var(--a)) translate(var(--tx)) scale(var(--f)) rotateX(10deg) scaleY(1.01543) rotate(calc(-1*var(--a)));
+  filter: grayscale(1);
+  transition: .3s;
+}
+.gallery__item:nth-child(2) {
+  --k: 0;
+}
+.gallery__item:nth-child(4) {
+  --k: 1;
+}
+.gallery__item:nth-child(6) {
+  --k: 2;
+}
+.gallery__item:nth-child(8) {
+  --k: 3;
+}
+.gallery__item:nth-child(10) {
+  --k: 4;
+}
+.gallery__item:nth-child(12) {
+  --k: 5;
+}
+.gallery__item:nth-child(14) {
+  --k: 6;
+}
+.gallery__item:nth-child(16) {
+  --k: 7;
+}
+.gallery__item:nth-child(18) {
+  --k: 8;
+}
+.gallery__item:nth-child(20) {
+  --k: 9;
+}
+.gallery__item:nth-child(22) {
+  --k: 10;
+}
+.gallery__item:nth-child(24) {
+  --k: 11;
+}
+.gallery__item:nth-child(26) {
+  --k: 12;
+}
+.gallery__item:nth-child(28) {
+  --k: 13;
+}
+.gallery__item:nth-child(30) {
+  --k: 14;
+}
+.gallery__item:nth-child(32) {
+  --k: 15;
+}
+.gallery__item:nth-child(34) {
+  --k: 16;
+}
+.gallery__item:nth-child(36) {
+  --k: 17;
+}
+.gallery__item:nth-child(38) {
+  --k: 18;
+}
+.gallery__item:nth-child(40) {
+  --k: 19;
+}
+.gallery__item:nth-child(42) {
+  --k: 20;
+}
+
+[type='radio']:focus + .gallery__item, .gallery__item:hover {
+  filter: none;
+}
+[type='radio']:checked + .gallery__item {
+  border-radius: 1rem;
+  transform: rotate(0deg) translate3d(0, 0, -1rem) rotatex(0deg) scale(1);
+  filter: none;
+}
+
+.info {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+}
+.info__content {
+  position: relative;
+  bottom: 3.5rem;
+  right: 1rem;
+  padding: .125em 0;
+  width: calc(100vw - 2rem);
+  max-height: calc(100vh - 5rem);
+  transform-origin: 100% 100%;
+  transform: scale(0);
+  background: rgba(255, 255, 255, 0.8);
+  transition: .3s .3s;
+  pointer-events: auto;
+}
+[type='checkbox']:checked ~ .info__content {
+  transform: none;
+  transition: .3s;
+}
+[type='checkbox']:checked ~ .info__content p {
+  opacity: 1;
+  transform: none;
+  transition: 0.3s calc(.3s + var(--k, 0)*.1s);
+}
+
+[for='show'] {
+  pointer-events: auto;
+}
+[for='show']:before, [for='show']:after {
+  position: absolute;
+  right: .5em;
+  width: 2em;
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px currentcolor;
+  font: 900 1.25rem/2 consolas, monospace;
+  text-align: center;
+}
+[for='show']:before {
+  position: absolute;
+  bottom: .5em;
+  width: 2em;
+  background: red;
+  color: whitesmoke;
+  filter: grayscale(0.5);
+  content: "👁️";
+}
+[for='show']:after {
+  position: absolute;
+  z-index: 2;
+  top: calc(100% - 2em);
+  transform: scale(0);
+  opacity: 0;
+  background: white;
+  color: silver;
+  transition: .3s .3s;
+  content: "x";
+}
+[type='checkbox']:checked + [for='show']:before, [type='checkbox']:focus + [for='show']:before, [for='show']:hover:before {
+  filter: none;
+}
+[type='checkbox']:checked + [for='show']:after {
+  top: -1.75rem;
+  opacity: 1;
+  transform: scale(1);
+  transition: .3s;
+}
+
+    </style>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+</head>
+
+<body>
+
+
+
+<section class="gallery">
+  <input class="galleria" id="gallery__item--1" type="radio" name="gallery__items"/>
+  <label class="gallery__item" for="gallery__item--1">gallery item 1<img src="gallery/a.gif" alt="Amur leopard image 1"/></label>
+  <input class="galleria" id="gallery__item--2" type="radio" name="gallery__items"/>
+  <label class="gallery__item" for="gallery__item--2">gallery item 2<img src="gallery/b.jpg" alt="Amur leopard image 2"/></label>
+  <input class="galleria" id="gallery__item--3" type="radio" name="gallery__items"/>
+  <label class="gallery__item" for="gallery__item--3">gallery item 3<img src="gallery/c.jpg" alt="Amur leopard image 3"/></label>
+  <input class="galleria" id="gallery__item--4" type="radio" name="gallery__items"/>
+  <label class="gallery__item" for="gallery__item--4">gallery item 4<img src="gallery/d.jpg" alt="Amur leopard image 4"/></label>
+  <input class="galleria" id="gallery__item--5" type="radio" name="gallery__items"/>
+  <label class="gallery__item" for="gallery__item--5">gallery item 5<img src="gallery/e.gif" alt="Amur leopard image 5"/></label>
+  <input class="galleria" id="gallery__item--6" type="radio" name="gallery__items"/>
+  <label class="gallery__item" for="gallery__item--6">gallery item 6<img src="gallery/f.gif" alt="Amur leopard image 6"/></label>
+  <input class="galleria" id="gallery__item--7" type="radio" name="gallery__items"/>
+  <label class="gallery__item" for="gallery__item--7">gallery item 7<img src="gallery/g.jpg" alt="Amur leopard image 7"/></label>
+  <input class="galleria" id="gallery__item--8" type="radio" name="gallery__items"/>
+  <label class="gallery__item" for="gallery__item--8">gallery item 8<img src="gallery/h.gif" alt="Amur leopard image 8"/></label>
+  <input class="galleria" id="gallery__item--9" type="radio" name="gallery__items"/>
+  <label class="gallery__item" for="gallery__item--9">gallery item 9<img src="gallery/i.gif" alt="Amur leopard image 9"/></label>
+  <input class="galleria" id="gallery__item--10" type="radio" name="gallery__items"/>
+  <label class="gallery__item" for="gallery__item--10">gallery item 10<img src="gallery/l.jpg" alt="Amur leopard image 10"/></label>
+  <input class="galleria" id="gallery__item--11" type="radio" name="gallery__items"/>
+  <label class="gallery__item" for="gallery__item--11">gallery item 11<img src="gallery/m.jpg" alt="Amur leopard image 11"/></label>
+  <input class="galleria" id="gallery__item--12" type="radio" name="gallery__items"/>
+  <label class="gallery__item" for="gallery__item--12">gallery item 12<img src="gallery/n.jpg" alt="Amur leopard image 12"/></label>
+  <input class="galleria" id="gallery__item--13" type="radio" name="gallery__items"/>
+  <label class="gallery__item" for="gallery__item--13">gallery item 13<img src="gallery/o.jpg" alt="Amur leopard image 13"/></label>
+  <input class="galleria" id="gallery__item--14" type="radio" name="gallery__items"/>
+  <label class="gallery__item" for="gallery__item--14">gallery item 14<img src="gallery/p.jpg" alt="Amur leopard image 14"/></label>
+  <input class="galleria" id="gallery__item--15" type="radio" name="gallery__items"/>
+  <label class="gallery__item" for="gallery__item--15">gallery item 15<img src="gallery/q.jpg" alt="Amur leopard image 15"/></label>
+  <input class="galleria" id="gallery__item--16" type="radio" name="gallery__items"/>
+  <label class="gallery__item" for="gallery__item--16">gallery item 16<img src="gallery/r.jpg" alt="Amur leopard image 16"/></label>
+  <input class="galleria" id="gallery__item--17" type="radio" name="gallery__items"/>
+  <label class="gallery__item" for="gallery__item--17">gallery item 17<img src="gallery/s.jpg" alt="Amur leopard image 17"/></label>
+  <input class="galleria" id="gallery__item--18" type="radio" name="gallery__items"/>
+  <label class="gallery__item" for="gallery__item--18">gallery item 18<img src="gallery/t.jpg" alt="Amur leopard image 18"/></label>
+  <input class="galleria" id="gallery__item--20" type="radio" name="gallery__items"/>
+  <label class="gallery__item" for="gallery__item--20">gallery item 20<img src="gallery/u.jpg" alt="Amur leopard image 20"/></label>
+  
+</section>
+
+
+<div class="title-box">
+<h2>The LOTRO Christmas Riddle</h2>
+<h3>- Find your precious in the memoriesss -</h3>
+<div class="form">
+<input id="mySecretInput1" type="text" minlength="1" maxlength="1" size="1">
+<input id="mySecretInput2" type="text" minlength="1" maxlength="1" size="1">
+<input id="mySecretInput3" type="text" minlength="1" maxlength="1" size="1">
+<input id="mySecretInput4" type="text" minlength="1" maxlength="1" size="1">
+<button id="myBtn" onclick="checkInput()">Submit</button>
+</div>
+</div>
+
+<section class="info">
+  <input class="galleria" id="show" type="checkbox"/>
+  <label for="show">show info</label>
+  <section class="info__content">
+    <center><p>This thing all things devours;<br>
+Birds, beasts, trees, flowers;<br>
+Gnaws iron, bites steel;<br>
+Grinds hard stones to meal;<br>
+Slays king, ruins town,<br>
+And beats mountain down.</p></center>
+
+<center><p>What is it, my precious?</p></center>
+  </section>
+</section>
+  
+  <script>
+function checkInput() {
+  var input1 = document.getElementById("mySecretInput1");
+  var input2 = document.getElementById("mySecretInput2");
+  var input3 = document.getElementById("mySecretInput3");
+  var input4 = document.getElementById("mySecretInput4");
+    if (input1.value === "t" && input2.value === "i" && input3.value === "m" && input4.value === "e") {
+      javascript:alert('Hello World!');
+    }
+    }
+</script>
+</body>
+</html>
